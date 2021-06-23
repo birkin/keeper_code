@@ -24,3 +24,9 @@
 
 - Call a separate function -- which would be the trigger to process the spreadsheet.
     - The processing would be tracked elsewhere.
+
+---
+
+### Questions
+
+- When to use
