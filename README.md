@@ -15,15 +15,18 @@
 
 ### Next
 
-- Read more of Rocket intro
-    - At: <https://rocket.rs/v0.5-rc/guide/overview/#async-routes>
+- Call a separate function called by `main.rs`.
+    - For reference, chapter 17 code from `the book` work.
 
-- Figure out logging
+- Other...
 
-- Figure out where static assets, ie favicon, go.
+    - Read more of Rocket intro
+        - At: <https://rocket.rs/v0.5-rc/guide/overview/#async-routes>
 
-- Call a separate function -- which would be the trigger to process the spreadsheet.
-    - The processing would be tracked elsewhere.
+    - Figure out logging
+
+    - Figure out where static assets, ie favicon, go.
+
 
 ---
 
