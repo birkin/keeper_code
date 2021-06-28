@@ -15,14 +15,6 @@ async fn index() -> &'static str {
 }
 
 
-
-// #[get("/version")]
-// async fn version() -> &'static str {
-//     use rocket::tokio::time::{sleep, Duration};
-//     sleep(Duration::from_secs(2)).await;
-//     "coming: version-response"
-// }
-
 #[get("/version")]
 async fn version() -> &'static str {
 
@@ -43,6 +35,22 @@ async fn version() -> &'static str {
 }
 
 
+#[get("/vrsn2")]
+async fn vrsn2() -> &'static str {
+
+    use rocket::tokio::time::{sleep, Duration, Instant};
+
+    let start = Instant::now();
+    // let zz: () = start;  // yields: found struct `std::time::Instant`
+
+    sleep(Duration::from_secs(1)).await;
+    let elapsed: Duration = start.elapsed();
+    // let zz: () = elapsed;  // yields: found struct `Duration`
+
+    println!( "elapsed time, `{:?}`", elapsed );
+
+    "coming: vrsn2-response"
+}
 
 
 #[get("/info")]
@@ -52,11 +60,13 @@ async fn info() -> &'static str {
     "coming: info-response"
 }
 
+
 #[launch]
 fn rocket() -> _ {
     rocket::build()
         .mount("/", routes![index])
         .mount("/", routes![version])
+        .mount("/", routes![vrsn2])
         .mount("/", routes![info])
 }
 
