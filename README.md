@@ -15,8 +15,7 @@
 
 ### Next
 
-- Call a separate function called by `main.rs`.
-    - For reference, chapter 17 code from `the book` work.
+- Make the called function return the elapsed time, and then output it.
 
 - Other...
 
@@ -27,6 +26,10 @@
 
     - Figure out where static assets, ie favicon, go.
 
+Done...
+
+√ Call a separate function called by `main.rs`.
+    - For reference, chapter 17 code from `the book` work.
 
 ---
 

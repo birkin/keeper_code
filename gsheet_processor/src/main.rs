@@ -18,21 +18,35 @@ async fn index() -> &'static str {
 #[get("/version")]
 async fn version() -> &'static str {
 
-    // use rocket::tokio::time::{sleep, Duration}; // original line 1
-    use rocket::tokio::time::{sleep, Duration, Instant};
+    use gsheet_processor::VersionHelper;
 
-    let start = Instant::now();
-    // let zz: () = start;  // yields: found struct `std::time::Instant`
+    VersionHelper::print_elapsed().await;
 
-    sleep(Duration::from_secs(1)).await;        // original line 2
+    println!( "lib function call done" );
 
-    let elapsed: Duration = start.elapsed();
-    // let zz: () = elapsed;  // yields: found struct `Duration`
+    "coming: version-response"
 
-    println!( "elapsed time, `{:?}`", elapsed );
-
-    "coming: version-response"                  // original line 3
 }
+
+
+// #[get("/version")]
+// async fn version() -> &'static str {
+
+//     // use rocket::tokio::time::{sleep, Duration}; // original line 1
+//     use rocket::tokio::time::{sleep, Duration, Instant};
+
+//     let start = Instant::now();
+//     // let zz: () = start;  // yields: found struct `std::time::Instant`
+
+//     sleep(Duration::from_secs(1)).await;        // original line 2
+
+//     let elapsed: Duration = start.elapsed();
+//     // let zz: () = elapsed;  // yields: found struct `Duration`
+
+//     println!( "elapsed time, `{:?}`", elapsed );
+
+//     "coming: version-response"                  // original line 3
+// }
 
 
 #[get("/vrsn2")]
